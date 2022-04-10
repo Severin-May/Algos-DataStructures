@@ -16,7 +16,7 @@ struct Node {
 };  
 
 /* 
-    initializes the node by settig its key to given key and its next to NULL
+    initializes the node by setting its key to a given key and its next to NULL
 */
 Node* init_node(Node* node, int key) {
     node->key = key;
@@ -40,7 +40,7 @@ void insert_at_front(Node **L, int x) {
 
 /*
     gets element at a given "index": there is no explicit indexing in the list,
-    i - sequence number of an element, starting from zero
+    i - sequence number of an element, starts from zero
 */
 Node* get_element(Node *L, int i) {
     Node *p = L;
@@ -53,7 +53,7 @@ Node* get_element(Node *L, int i) {
 }
 
 /*
-    deletes the very first node of the list, if the list is empty sends a warning
+    deletes the very first node of the list, if the list is empty displays an error message
 */
 void delete_first(Node **L) {
     if((*L) == NULL || L == NULL) { printf("The linked-list is empty or does not exist!"); }
@@ -100,10 +100,8 @@ int main() {
    init_node(ll, 1);
    insert_at_front(&ll, 2);
    insert_at_front(&ll, 3);
-   //printf("%d ", get_element(ll, 1)->key);
+//    printf("%d ", get_element(ll, 1)->key);
    print_list(ll);
-//    delete_first(&ll);
-//    delete_first(&ll);
 //    delete_first(&ll);
 //    delete_first(&ll);
    delete_next(ll);
